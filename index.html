@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código de Ética Profesional - Nicolás Gamboa</title>
+    <meta name="description" content="Compromiso ético como futuro Ingeniero en Software">
+    <meta name="author" content="Nicolás Gamboa">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            min-height: 100vh;
+            padding: 8px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.3);
+            border: 4px solid #000;
+            border-radius: 24px;
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+            overflow: hidden;
+        }
+
+        .header {
+            border-bottom: 4px solid #000;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(16px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-icon {
+            padding: 12px;
+            background: #000;
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-title {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+        }
+
+        .header-subtitle {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #374151;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: 2px solid #000;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #000;
+        }
+
+        .btn-primary {
+            background: #000;
+            color: white;
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            padding: 24px;
+        }
+
+        .tabs {
+            width: 100%;
+        }
+
+        .tab-list {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid #000;
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .tab-trigger {
+            flex: 1;
+            min-width: 120px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: transparent;
+        }
+
+        .tab-trigger.active {
+            background: #000;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .card {
+            border: 4px solid #000;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+            background: white;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .info-box {
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid #000;
+            border-radius: 12px;
+        }
+
+        .info-title {
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 8px;
+        }
+
+        .info-content {
+            font-size: 1.25rem;
+        }
+
+        .badge {
+            background: #000;
+            color: white;
+            font-size: 1.125rem;
+            padding: 8px 16px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .principle-card {
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid #000;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .principle-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .principle-icon {
+            padding: 8px;
+            background: #000;
+            color: white;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .principle-title {
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 8px;
+        }
+
+        .principle-desc {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .gradient-box {
+            padding: 16px;
+            border: 2px solid #000;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+
+        .gradient-green {
+            background: linear-gradient(to right, #dcfce7, #a7f3d0);
+        }
+
+        .gradient-blue {
+            background: linear-gradient(to right, #dbeafe, #bfdbfe);
+        }
+
+        .gradient-purple {
+            background: linear-gradient(to right, #e9d5ff, #c4b5fd);
+        }
+
+        .gradient-yellow {
+            background: linear-gradient(to right, #fef3c7, #fde68a);
+        }
+
+        .gradient-red {
+            background: linear-gradient(to right, #fee2e2, #fecaca);
+        }
+
+        .clause-card {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid #000;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            transition: transform 0.2s;
+        }
+
+        .clause-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .clause-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .clause-icon {
+            padding: 12px;
+            background: #000;
+            color: white;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .clause-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .clause-desc {
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+
+        .signature-section {
+            margin-top: 32px;
+            position: relative;
+        }
+
+        .signature-card {
+            border: 4px solid #000;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+            background: linear-gradient(to right, #fffbeb, #fef3c7);
+        }
+
+        .signature-pending {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px dashed #9ca3af;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .signature-button {
+            background: linear-gradient(to right, #eab308, #f59e0b);
+            color: white;
+            border: 2px solid #000;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            padding: 12px 32px;
+            cursor: pointer;
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+            transition: all 0.2s;
+        }
+
+        .signature-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .motivational-message {
+            padding: 16px;
+            background: linear-gradient(to right, #dcfce7, #bbf7d0);
+            border: 2px solid #16a34a;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 16px;
+            animation: pulse 2s infinite;
+        }
+
+        .signature-complete {
+            padding: 24px;
+            background: white;
+            border: 4px solid #000;
+            border-radius: 12px;
+            box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        .signature-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .signature-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-icon {
+            padding: 8px;
+            background: #16a34a;
+            color: white;
+            border-radius: 50%;
+        }
+
+        .status-text {
+            font-weight: 700;
+            color: #15803d;
+        }
+
+        .verified-badge {
+            background: #16a34a;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        .signature-box {
+            padding: 16px;
+            background: linear-gradient(to right, #eff6ff, #dbeafe);
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .signature-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-family: cursive;
+        }
+
+        .signature-line {
+            width: 192px;
+            height: 2px;
+            background: #000;
+            margin: 0 auto 8px;
+        }
+
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            opacity: 0.9;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .mb-4 {
+            margin-bottom: 16px;
+        }
+
+        .mb-6 {
+            margin-bottom: 24px;
+        }
+
+        .mt-4 {
+            margin-top: 16px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .header-title {
+                font-size: 1.5rem;
+            }
+            
+            .tab-list {
+                flex-direction: column;
+            }
+            
+            .tab-trigger {
+                min-width: auto;
+            }
+            
+            .principle-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="header-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="header-title">MI CÓDIGO DE ÉTICA</h1>
+                        <p class="header-subtitle">Compromiso como Futuro Ingeniero en Software</p>
+                    </div>
+                </div>
+                <div class="header-buttons">
+                    <button class="btn btn-outline" onclick="window.print()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 6,2 18,2 18,9"/>
+                            <path d="M6,18H4a2,2,0,0,1-2-2V11a2,2,0,0,1,2-2H20a2,2,0,0,1,2,2v5a2,2,0,0,1-2-2H18"/>
+                            <rect x="6" y="14" width="12" height="8"/>
+                        </svg>
+                        Imprimir
+                    </button>
+                    <button class="btn btn-primary" onclick="downloadPDF()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7,10 12,15 17,10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Descargar PDF
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="tabs">
+                <!-- Tab Navigation -->
+                <div class="tab-list">
+                    <button class="tab-trigger active" onclick="showTab('datos')">Datos Generales</button>
+                    <button class="tab-trigger" onclick="showTab('introduccion')">Introducción</button>
+                    <button class="tab-trigger" onclick="showTab('principios')">Principios</button>
+                    <button class="tab-trigger" onclick="showTab('normas')">Normas</button>
+                    <button class="tab-trigger" onclick="showTab('clausulas')">Cláusulas</button>
+                    <button class="tab-trigger" onclick="showTab('reflexion')">Reflexión</button>
+                </div>
+
+                <!-- Datos Generales -->
+                <div id="datos" class="tab-content active">
+    <div class="card">
+        <div class="card-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <h2 class="card-title">DATOS GENERALES DEL EQUIPO</h2>
+        </div>
+        <div class="grid grid-2">
+            <div>
+                <div class="info-box mb-4">
+                    <h3 class="info-title">Integrantes del equipo:</h3>
+                    <div style="margin-top: 8px;">
+                        <p class="info-content" style="margin-bottom: 4px;">• Nicolás Gamboa</p>
+                        <p class="info-content">• Liliana Vecino Colli</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Carrera:</h3>
+                    <span class="badge">Ingeniería en Software</span>
+                </div>
+            </div>
+            <div>
+                <div class="info-box mb-4">
+                    <h3 class="info-title">Semestre y grupo:</h3>
+                    <p class="info-content">3° Cuatrimestre – Grupo 3°C</p>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Fecha de entrega:</h3>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <p class="info-content">01 de agosto de 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright Section -->
+        <div style="margin-top: 32px; padding: 16px; background: linear-gradient(to right, #f3f4f6, #e5e7eb); border: 2px solid #000; border-radius: 12px;">
+            <div style="text-align: center;">
+                <p style="font-size: 0.875rem; font-weight: 700; color: #374151; margin-bottom: 8px;">
+                    © 2025 - Código de Ética Profesional
+                </p>
+                <p style="font-size: 0.75rem; color: #6b7280;">
+                    Todos los derechos reservados a <strong>Nicolás Gamboa</strong> y <strong>Liliana Vecino Colli</strong>
+                </p>
+                <p style="font-size: 0.75rem; color: #9ca3af; margin-top: 4px;">
+                    Ingeniería en Software - 3° Cuatrimestre - Grupo 3°C
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!-- Introducción -->
+                <div id="introduccion" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                            <h2 class="card-title">INTRODUCCIÓN</h2>
+                        </div>
+                        <div>
+                            <p class="text-lg mb-4">
+                                Un código de ética es un conjunto de principios, valores y normas de conducta que guían el
+                                comportamiento profesional y personal de quienes lo adoptan. En el área de la tecnología, este
+                                código actúa como una <strong>brújula moral</strong> que orienta nuestras decisiones, especialmente
+                                en contextos donde la ley no siempre ofrece respuestas claras.
+                            </p>
+                            <p class="text-lg mb-4">
+                                Contar con un código de ética como profesional es esencial para construir relaciones de confianza,
+                                actuar con responsabilidad y tomar decisiones que respeten tanto a los usuarios como al entorno
+                                social y digital.
+                            </p>
+                            <div class="gradient-box gradient-blue">
+                                <p class="text-lg" style="font-weight: 700;">
+                                    <strong>Finalidad:</strong> Establecer compromisos claros sobre cómo quiero ejercer mi profesión,
+                                    consolidando una visión ética, inclusiva y sustentable del desarrollo tecnológico.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Principios -->
+                <div id="principios" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 11c0 2.5-1.5 4.5-4 4.5s-4-2-4-4.5 1.5-4.5 4-4.5 4 2 4 4.5z"/>
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                            </svg>
+                            <h2 class="card-title">PRINCIPIOS ÉTICOS FUNDAMENTALES</h2>
+                        </div>
+                        <div class="principle-grid">
+                            <div class="principle-card">
+                                <div class="principle-header">
+                                    <div class="principle-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="principle-title">Responsabilidad</h3>
+                                        <p class="principle-desc">Consideraré siempre el impacto de mis decisiones técnicas en la sociedad y el medio ambiente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-header">
+                                    <div class="principle-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="principle-title">Integridad</h3>
+                                        <p class="principle-desc">Actuaré con honestidad, evitando cualquier forma de plagio, manipulación o engaño.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-header">
+                                    <div class="principle-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="9" cy="7" r="4"/>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="principle-title">Respeto</h3>
+                                        <p class="principle-desc">Trataré con dignidad a todos los involucrados en el proceso tecnológico, promoviendo un ambiente inclusivo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-header">
+                                    <div class="principle-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M16 11c0 2.5-1.5 4.5-4 4.5s-4-2-4-4.5 1.5-4.5 4-4.5 4 2 4 4.5z"/>
+                                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="principle-title">Justicia</h3>
+                                        <p class="principle-desc">Lucharé por el acceso equitativo a la tecnología, sin discriminación.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-header">
+                                    <div class="principle-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                            <circle cx="12" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="principle-title">Transparencia</h3>
+                                        <p class="principle-desc">Comunicaré mis procesos, decisiones y limitaciones con claridad.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-header">
+                                    <div class="principle-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="8" r="7"/>
+                                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="principle-title">Compromiso con la Calidad</h3>
+                                        <p class="principle-desc">Entregaré productos confiables, bien diseñados y funcionales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-header">
+                                    <div class="principle-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="principle-title">Legalidad</h3>
+                                        <p class="principle-desc">Cumpliré con leyes, regulaciones y buenas prácticas sobre software, datos y derechos digitales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-header">
+                                    <div class="principle-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="5"/>
+                                            <line x1="12" y1="1" x2="12" y2="3"/>
+                                            <line x1="12" y1="21" x2="12" y2="23"/>
+                                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                            <line x1="1" y1="12" x2="3" y2="12"/>
+                                            <line x1="21" y1="12" x2="23" y2="12"/>
+                                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="principle-title">Innovación Responsable</h3>
+                                        <p class="principle-desc">Desarrollaré soluciones tecnológicas alineadas con valores éticos y humanos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Normas -->
+                <div id="normas" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <h2 class="card-title">NORMAS DE CONDUCTA PROFESIONAL</h2>
+                        </div>
+                        <div class="grid">
+                            <div class="gradient-box gradient-green">
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    <h3 class="text-xl">Conducta Personal</h3>
+                                </div>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 8px;">• Seré ético en el uso de tecnologías, incluyendo la inteligencia artificial.</li>
+                                    <li>• Me capacitaré continuamente para responder a los desafíos del entorno digital.</li>
+                                </ul>
+                            </div>
+                            <div class="gradient-box gradient-blue">
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                    <h3 class="text-xl">Conducta con Colegas y Supervisores</h3>
+                                </div>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 8px;">• Fomentaré el respeto mutuo, el trabajo colaborativo y el reconocimiento de ideas.</li>
+                                    <li>• Rechazaré ambientes tóxicos, conductas abusivas y discriminación.</li>
+                                </ul>
+                            </div>
+                            <div class="gradient-box gradient-purple">
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                    <h3 class="text-xl">Conducta con Clientes y Usuarios</h3>
+                                </div>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 8px;">• Diseñaré soluciones seguras, accesibles y centradas en las necesidades reales del usuario.</li>
+                                    <li>• Comunicaré de forma clara, sin generar falsas expectativas.</li>
+                                </ul>
+                            </div>
+                            <div class="gradient-box gradient-yellow">
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <circle cx="12" cy="16" r="1"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                    <h3 class="text-xl">Protección de Datos y Privacidad</h3>
+                                </div>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 8px;">• Respetaré la confidencialidad de los datos personales y sensibles.</li>
+                                    <li>• Aplicaré buenas prácticas de seguridad y protección de la información.</li>
+                                </ul>
+                            </div>
+                            <div class="gradient-box gradient-red">
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 11c0 2.5-1.5 4.5-4 4.5s-4-2-4-4.5 1.5-4.5 4-4.5 4 2 4 4.5z"/>
+                                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                    </svg>
+                                    <h3 class="text-xl">Conducta ante la Ley</h3>
+                                </div>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 8px;">• Cumpliré con normativas sobre licencias, propiedad intelectual y derechos digitales.</li>
+                                    <li>• Rechazaré prácticas fraudulentas, incluyendo el uso de software no autorizado.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cláusulas -->
+                <div id="clausulas" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"/>
+                                <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                            </svg>
+                            <h2 class="card-title">CLÁUSULAS ESPECIALES O PERSONALES</h2>
+                        </div>
+                        <div class="gradient-box gradient-yellow mb-6">
+                            <p class="text-lg" style="font-weight: 500;">
+                                Estas cláusulas representan compromisos personales que reflejan mi identidad profesional, mis
+                                principios y la manera en que quiero contribuir éticamente al desarrollo tecnológico.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="clause-card">
+                                <div class="clause-header">
+                                    <div class="clause-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 17H1a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h1l5.04-2.94A2.5 2.5 0 0 1 9.5 2z"/>
+                                            <path d="M14.5 7.5a5 5 0 0 1 0 9"/>
+                                            <path d="M17 4a9 9 0 0 1 0 16"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="clause-title">1. Autenticidad y honestidad intelectual</h3>
+                                        <p class="clause-desc">Asumo el compromiso de aprender y crecer por méritos propios. Rechazo el uso de IA o cualquier herramienta como medio para evadir el esfuerzo intelectual.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clause-card">
+                                <div class="clause-header">
+                                    <div class="clause-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="14" y="14" width="4" height="6" rx="1"/>
+                                            <rect x="6" y="4" width="4" height="16" rx="1"/>
+                                            <rect x="10" y="9" width="4" height="11" rx="1"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="clause-title">2. Uso ético y consciente de la Inteligencia Artificial</h3>
+                                        <p class="clause-desc">Utilizaré la IA como herramienta de apoyo, no como reemplazo de la ética. Me opondré al desarrollo de sistemas que perpetúen sesgos o vulneren derechos humanos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clause-card">
+                                <div class="clause-header">
+                                    <div class="clause-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="16" cy="4" r="1"/>
+                                            <path d="M18 19h-2l-1.5-4.5L16 11l4 2v6"/>
+                                            <path d="M2 19h20"/>
+                                            <path d="M6 19v-4c0-1 .5-1.5 1-2l2-2c.5-.5 1.5-1 2.5-1H14"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="clause-title">3. Inclusión digital y accesibilidad</h3>
+                                        <p class="clause-desc">Diseñaré productos pensados para todos, sin excluir a personas con discapacidades, limitaciones tecnológicas o de conectividad.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clause-card">
+                                <div class="clause-header">
+                                    <div class="clause-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M7 20h10"/>
+                                            <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
+                                            <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
+                                            <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.7 4.3-1.4 1-1.1 1.6-2.7 1.7-4.6-2.7.1-4 1-4.9 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="clause-title">4. Sustentabilidad digital</h3>
+                                        <p class="clause-desc">Me comprometo a escribir código eficiente, reducir el uso innecesario de recursos y apoyar proyectos que consideren el impacto ambiental.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clause-card">
+                                <div class="clause-header">
+                                    <div class="clause-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="clause-title">5. Rechazo a ambientes tóxicos o antiéticos</h3>
+                                        <p class="clause-desc">No participaré en entornos laborales abusivos o discriminatorios. Buscaré contribuir a espacios que respeten la salud mental y la dignidad humana.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clause-card">
+                                <div class="clause-header">
+                                    <div class="clause-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="12" y1="1" x2="12" y2="23"/>
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="clause-title">6. Ética por encima del beneficio económico</h3>
+                                        <p class="clause-desc">Anteponer el beneficio financiero a los valores éticos no forma parte de mi visión profesional. Me comprometo a actuar correctamente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clause-card">
+                                <div class="clause-header">
+                                    <div class="clause-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                            <polyline points="16,6 12,2 8,6"/>
+                                            <line x1="12" y1="2" x2="12" y2="15"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="clause-title">7. Compartir conocimiento y fomentar comunidad</h3>
+                                        <p class="clause-desc">Promoveré una cultura de mentoría y colaboración. Compartiré lo que sé, reconociendo que la tecnología avanza colectivamente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reflexión -->
+                <div id="reflexion" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 17H1a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h1l5.04-2.94A2.5 2.5 0 0 1 9.5 2z"/>
+                            </svg>
+                            <h2 class="card-title">REFLEXIÓN FINAL</h2>
+                        </div>
+                        <div>
+                            <p class="text-lg mb-4">
+                                La ingeniería en software no se limita al diseño de aplicaciones o sistemas. Es una disciplina con
+                                gran <strong>responsabilidad social</strong>, que debe construirse desde la ética, el respeto y la
+                                conciencia del impacto que generamos en las personas y en el entorno.
+                            </p>
+                            <div class="gradient-box gradient-purple mb-6">
+                                <p class="text-lg mb-4" style="font-weight: 700;">
+                                    Este código no es un requisito académico más; es una manifestación de mi compromiso con el tipo de
+                                    profesional que quiero ser.
+                                </p>
+                                <p class="text-lg">
+                                    Aspiro a contribuir con soluciones que no solo funcionen, sino que también respeten la dignidad
+                                    humana, fomenten la inclusión, y busquen un equilibrio entre innovación y responsabilidad.
+                                </p>
+                            </div>
+                            <p class="text-lg mb-4">
+                                Mi trabajo tendrá verdadero valor no solo por lo que pueda hacer técnicamente, sino por la{" "}
+                                <strong>intención ética</strong> con la que lo ejecute.
+                            </p>
+                            <div class="gradient-box gradient-green text-center mb-6">
+                                <p class="text-xl" style="font-weight: 900;">
+                                    "Porque el futuro de la tecnología no solo se programa: se diseña con conciencia."
+                                </p>
+                            </div>
+
+                            <!-- Sección de Firma -->
+                            <div class="signature-section">
+                                <div class="signature-card">
+                                    <div class="card-header">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                        </svg>
+                                        <h3 style="font-size: 1.25rem; font-weight: 900;">FIRMA DEL COMPROMISO</h3>
+                                    </div>
+                                    <p class="text-lg mb-6">
+                                        Este código representa mi compromiso personal y profesional. Al firmarlo, acepto seguir estos
+                                        principios durante toda mi carrera en ingeniería de software.
+                                    </p>
+
+                                    <div id="signature-pending" class="signature-pending">
+                                        <p style="color: #6b7280; font-weight: 500; margin-bottom: 16px;">Estado: Pendiente de firma</p>
+                                        <button class="signature-button" onclick="signCommitment()">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                            FIRMAR CÓDIGO DE ÉTICA
+                                        </button>
+                                    </div>
+
+                                    <div id="signature-complete" class="hidden">
+                                        <div id="motivational-message" class="motivational-message">
+                                            <p style="font-size: 1.125rem; font-weight: 700; color: #15803d;"></p>
+                                        </div>
+                                        <div class="signature-complete">
+                                            <div class="signature-header">
+                                                <div class="signature-status">
+                                                    <div class="status-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                            <polyline points="20,6 9,17 4,12"/>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="status-text">COMPROMISO ACEPTADO</span>
+                                                </div>
+                                                <span class="verified-badge">Verificado</span>
+                                            </div>
+                                            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 16px;">
+                                                Firmado digitalmente el: <span id="signature-date"></span>
+                                            </p>
+                                            <div class="signature-box">
+                                                <div class="text-center">
+                                                    <p class="signature-name">Nicolás Gamboa & Liliana Vecino Colli</p>
+                                                    <div class="signature-line"></div>
+                                                    <p style="font-size: 0.875rem; font-weight: 500; color: #374151;">
+                                                        Estudiantes de Ingeniería en Software
+                                                    </p>
+                                                    <p style="font-size: 0.75rem; color: #6b7280; margin-top: 8px;">3° Cuatrimestre - Grupo 3°C</p>
+                                                </div>
+                                            </div>
+                                            <div class="mt-4 text-center">
+                                                <p style="font-size: 1.125rem; font-weight: 700; color: #374151; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                                    </svg>
+                                                    "Comprometido con la excelencia y la ética profesional"
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales
+        let isSigned = false;
+        const motivationalMessages = [
+            "¡Excelente! Tu compromiso ético es el fundamento de una carrera exitosa 🚀",
+            "Has sellado tu compromiso con la excelencia y la ética profesional ⭐",
+            "Tu firma representa el inicio de un camino profesional íntegro 🛤️",
+            "¡Felicidades! Ahora eres oficialmente un ingeniero comprometido con la ética 🎯",
+            "Tu integridad profesional acaba de ser oficialmente reconocida 🏆",
+            "¡Increíble! Has dado el primer paso hacia una carrera tecnológica responsable 🌟",
+            "Tu compromiso ético te distingue como un profesional excepcional 💎",
+            "¡Bravo! La tecnología necesita más profesionales como tú 🌍",
+            "Has demostrado que la ética y la innovación van de la mano 🤝",
+            "Tu firma es el sello de un futuro ingeniero ejemplar 🎓"
+        ];
+
+        // Función para cambiar tabs
+        function showTab(tabName) {
+            // Ocultar todos los contenidos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remover clase active de todos los triggers
+            const triggers = document.querySelectorAll('.tab-trigger');
+            triggers.forEach(trigger => {
+                trigger.classList.remove('active');
+            });
+
+            // Mostrar el contenido seleccionado
+            document.getElementById(tabName).classList.add('active');
+
+            // Activar el trigger correspondiente
+            event.target.classList.add('active');
+        }
+
+        // Función para crear confeti
+        function createConfetti() {
+            const confettiContainer = document.createElement('div');
+            confettiContainer.className = 'confetti';
+            document.body.appendChild(confettiContainer);
+
+            const pinkColors = [
+                '#FF69B4', // Hot Pink
+                '#FFB6C1', // Light Pink
+                '#FF1493', // Deep Pink
+                '#FFC0CB', // Pink
+                '#FF91A4', // Salmon Pink
+                '#FF8FA3', // Light Salmon Pink
+                '#FF6B9D', // Medium Pink
+                '#FF85B3'  // Soft Pink
+            ];
+
+            // Crear confeti cuadrado
+            for (let i = 0; i < 80; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.width = '8px';
+                piece.style.height = '8px';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.backgroundColor = pinkColors[Math.floor(Math.random() * pinkColors.length)];
+                piece.style.opacity = (0.6 + Math.random() * 0.3).toString();
+                piece.style.animation = `confetti-fall ${2 + Math.random() * 3}s ease-out forwards`;
+                piece.style.animationDelay = Math.random() * 2 + 's';
+                piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confettiContainer.appendChild(piece);
+            }
+
+            // Crear confeti rectangular
+            for (let i = 0; i < 50; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.width = '12px';
+                piece.style.height = '4px';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.backgroundColor = pinkColors[Math.floor(Math.random() * pinkColors.length)];
+                piece.style.opacity = (0.6 + Math.random() * 0.2).toString();
+                piece.style.animation = `confetti-fall ${2.5 + Math.random() * 2.5}s ease-out forwards`;
+                piece.style.animationDelay = Math.random() * 1.5 + 's';
+                piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confettiContainer.appendChild(piece);
+            }
+
+            // Crear confeti circular
+            for (let i = 0; i < 40; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.width = '4px';
+                piece.style.height = '4px';
+                piece.style.borderRadius = '50%';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.backgroundColor = pinkColors[Math.floor(Math.random() * pinkColors.length)];
+                piece.style.opacity = (0.7 + Math.random() * 0.3).toString();
+                piece.style.animation = `confetti-fall ${3 + Math.random() * 2}s ease-out forwards`;
+                piece.style.animationDelay = Math.random() * 1 + 's';
+                piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confettiContainer.appendChild(piece);
+            }
+
+            // Remover confeti después de 4 segundos
+            setTimeout(() => {
+                document.body.removeChild(confettiContainer);
+            }, 4000);
+        }
+
+        // Función para firmar el compromiso
+        function signCommitment() {
+            if (isSigned) return;
+
+            const randomMessage = motivationalMessages[Math.floor(Math.random() * motivationalMessages.length)];
+            
+            // Mostrar mensaje motivacional
+            const messageElement = document.querySelector('#motivational-message p');
+            messageElement.textContent = randomMessage;
+
+            // Mostrar fecha actual
+            const dateElement = document.getElementById('signature-date');
+            const currentDate = new Date().toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            dateElement.textContent = currentDate;
+
+            // Ocultar sección pendiente y mostrar completada
+            document.getElementById('signature-pending').classList.add('hidden');
+            document.getElementById('signature-complete').classList.remove('hidden');
+
+            // Crear confeti
+            createConfetti();
+
+            isSigned = true;
+        }
+
+        // Función para descargar PDF (simulada)
+        function downloadPDF() {
+            alert('Funcionalidad de descarga PDF - En una implementación real, esto generaría un PDF del documento.');
+        }
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            // El tab "datos" ya está activo por defecto
+            console.log('Código de Ética Profesional cargado correctamente');
+        });
+    </script>
+</body>
+</html>
