@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="social-media-manager">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Proyecto_completo/social-media/social-media-manager.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
